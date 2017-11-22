@@ -6,9 +6,12 @@ public class Pokemon {
 	private int[] IVs = new int[6];
 	private int[] TOTALS = new int[6];
 	
-	public Pokemon(int[] EVs, int[] IVs) {
+	private Nature NATURE = Nature.SERIOUS;
+	
+	public Pokemon(int[] EVs, int[] IVs, Nature NATURE) {
 		this.EVs = EVs;
 		this.IVs = IVs;
+		this.NATURE = NATURE;
 		reloadTotals();
 	}
 	
@@ -24,8 +27,20 @@ public class Pokemon {
 		return IVs;
 	}
 	
+	public int getEV(int STAT) {
+		return EVs[STAT];
+	}
+	
+	public int getIV(int STAT) {
+		return IVs[STAT];
+	}
+	
 	public int[] getTotals() {
 		return TOTALS;
+	}
+	
+	public Nature getNature() {
+		return NATURE;
 	}
 	
 	public void setEV(int[] EVs) {
@@ -50,5 +65,18 @@ public class Pokemon {
 			}
 			this.IVs[x] = IVs[x];
 		}
+	}
+	
+	public void setStat(int STAT, int EV, int IV) {
+		if(EV >= 0 && EV <= 252) {
+			EVs[STAT] = EV;
+		}
+		if(IV >= 0 && IV <= 31) {
+			IVs[STAT] = IV;
+		}
+	}
+	
+	public void setNature(Nature NATURE) {
+		this.NATURE = NATURE;
 	}
 }
