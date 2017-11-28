@@ -5,13 +5,15 @@ public class Pokemon {
 	private int[] EVs = new int[6];
 	private int[] IVs = new int[6];
 	private int[] TOTALS = new int[6];
+	private String NICK = "";
 	
 	private Nature NATURE = Nature.SERIOUS;
 	private Species SPECIES;
 	
-	public Pokemon(int[] EVs, int[] IVs, Nature NATURE, Species SPECIES) {
+	public Pokemon(int[] EVs, int[] IVs, String NICK, Nature NATURE, Species SPECIES) {
 		this.EVs = EVs;
 		this.IVs = IVs;
+		this.NICK = NICK;
 		this.NATURE = NATURE;
 		this.SPECIES = SPECIES;
 		reloadTotals();
@@ -43,6 +45,12 @@ public class Pokemon {
 	
 	public Nature getNature() {
 		return NATURE;
+	}
+	
+	public String getName() {
+		if(NICK == "")
+			return SPECIES.getName();
+		return NICK;
 	}
 	
 	public void setEV(int[] EVs) {

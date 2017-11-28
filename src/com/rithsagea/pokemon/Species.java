@@ -1,16 +1,21 @@
 package com.rithsagea.pokemon;
 
+import com.rithsagea.pokemon.exp.GrowthTypes;
+
 public class Species {
 	private final int[] BASE;
 	private final int ID;
 	private final String NAME;
 	private final String DEXENTRY;
 	
-	public Species(int[] BASE, int ID, String NAME, String DEXENTRY) {
+	private final GrowthTypes EXPTYPE;
+	
+	public Species(int[] BASE, int ID, String NAME, String DEXENTRY, GrowthTypes EXPTYPE) {
 		this.BASE = BASE;
 		this.ID = ID;
 		this.NAME = NAME;
 		this.DEXENTRY = DEXENTRY;
+		this.EXPTYPE = EXPTYPE;
 	}
 	
 	public int[] getBaseStats() {
@@ -27,5 +32,9 @@ public class Species {
 	
 	public String getFlavor() {
 		return DEXENTRY;
+	}
+	
+	public GrowthTypes getGrowthType() {
+		return EXPTYPE;
 	}
 }
