@@ -1,21 +1,27 @@
-package com.rithsagea.pokemon;
+package com.rithsagea.pokemon.api;
+
+import com.rithsagea.pokemon.api.item.Item;
 
 public class Pokemon {
 	
 	private int[] EVs = new int[6];
 	private int[] IVs = new int[6];
 	private int[] TOTALS = new int[6];
+	private int EXP = 0;
 	private String NICK = "";
 	
 	private Nature NATURE = Nature.SERIOUS;
 	private Species SPECIES;
+	private Item ITEM;
 	
-	public Pokemon(int[] EVs, int[] IVs, String NICK, Nature NATURE, Species SPECIES) {
+	public Pokemon(int[] EVs, int[] IVs, int EXP, String NICK, Nature NATURE, Species SPECIES, Item ITEM) {
 		this.EVs = EVs;
 		this.IVs = IVs;
+		this.EXP = EXP;
 		this.NICK = NICK;
 		this.NATURE = NATURE;
 		this.SPECIES = SPECIES;
+		this.ITEM = ITEM;
 		reloadTotals();
 	}
 	
@@ -96,5 +102,21 @@ public class Pokemon {
 	
 	public void setSpecies(Species SPECIES) {
 		this.SPECIES = SPECIES;
+	}
+	
+	public void addEXP(int EXP) {
+		this.EXP += EXP;
+	}
+	
+	public int getEXP() {
+		return EXP;
+	}
+	
+	public Item getItem() {
+		return ITEM;
+	}
+	
+	public void setItem(Item ITEM) {
+		this.ITEM = ITEM;
 	}
 }

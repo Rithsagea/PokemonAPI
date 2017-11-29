@@ -1,4 +1,4 @@
-package com.rithsagea.pokemon; // Make events for each battle thingy and implement into this.
+package com.rithsagea.pokemon.api; // Make events for each battle thingy and implement into this.
 
 public class Ability {
 	

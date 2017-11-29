@@ -1,6 +1,6 @@
-package com.rithsagea.pokemon;
+package com.rithsagea.pokemon.api;
 
-import com.rithsagea.pokemon.exp.GrowthTypes;
+import com.rithsagea.pokemon.api.exp.GrowthTypes;
 
 public class Species {
 	private final int[] BASE;
