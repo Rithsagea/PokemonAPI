@@ -9,7 +9,7 @@ public enum GrowthTypes {
 		this.ID = ID;
 	}
 	
-	public int getGrowthID() {
-		return ID;
+	public int getEXP() {
+		return 100; //replace with something else
 	}
 }
