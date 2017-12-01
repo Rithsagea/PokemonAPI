@@ -1,5 +1,6 @@
 package com.rithsagea.pokemon.api;
 
+import com.rithsagea.pokemon.api.battling.Move;
 import com.rithsagea.pokemon.api.item.Item;
 
 public class Pokemon {
@@ -14,7 +15,9 @@ public class Pokemon {
 	private Species SPECIES;
 	private Item ITEM;
 	
-	public Pokemon(int[] EVs, int[] IVs, int EXP, String NICK, Nature NATURE, Species SPECIES, Item ITEM) {
+	private Move MOVES[] = new Move[4];
+	
+	public Pokemon(int[] EVs, int[] IVs, int EXP, String NICK, Nature NATURE, Species SPECIES, Item ITEM, Move[] MOVES) {
 		this.EVs = EVs;
 		this.IVs = IVs;
 		this.EXP = EXP;
@@ -22,6 +25,7 @@ public class Pokemon {
 		this.NATURE = NATURE;
 		this.SPECIES = SPECIES;
 		this.ITEM = ITEM;
+		this.MOVES = MOVES;
 		reloadTotals();
 	}
 	
@@ -118,5 +122,15 @@ public class Pokemon {
 	
 	public void setItem(Item ITEM) {
 		this.ITEM = ITEM;
+	}
+	
+	public Move[] getMoves() {
+		return MOVES;
+	}
+	
+	public void setMove(int position, Move MOVE) {
+		if(position >= 0 && position <= 3) {
+			MOVES[position] = MOVE;
+		}
 	}
 }
