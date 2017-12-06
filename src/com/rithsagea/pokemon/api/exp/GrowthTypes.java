@@ -8,8 +8,4 @@ public enum GrowthTypes {
 	private GrowthTypes(int ID) {
 		this.ID = ID;
 	}
-	
-	public int getEXP() {
-		return 100; //replace with something else
-	}
 }
