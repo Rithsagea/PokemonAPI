@@ -22,6 +22,10 @@ public class Species {
 		return BASE;
 	}
 	
+	public int getBaseStat(int STAT) {
+		return BASE[STAT];
+	}
+	
 	public int getID() {
 		return ID;
 	}

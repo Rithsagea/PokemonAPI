@@ -30,7 +30,13 @@ public class Pokemon {
 	}
 	
 	public void reloadTotals() {
-		//Stuff Here for total stat calc.
+		for(int x = 0; x < 5; x++) {
+			
+		}
+	}
+	
+	public int getLevel() {
+		return 100; // change later
 	}
 	
 	public int[] getEVs() {

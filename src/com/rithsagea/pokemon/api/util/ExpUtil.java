@@ -1,4 +1,6 @@
-package com.rithsagea.pokemon.api.exp;
+package com.rithsagea.pokemon.api.util;
+
+import com.rithsagea.pokemon.api.exp.GrowthTypes;
 
 public class ExpUtil {
 	private final int[] ERRATIC = new int[100];
