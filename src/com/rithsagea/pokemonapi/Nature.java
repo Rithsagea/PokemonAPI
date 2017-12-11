@@ -1,4 +1,4 @@
-package com.rithsagea.pokemon.api;
+package com.rithsagea.pokemonapi;
 
 public enum Nature {
 	BASHFUL(1, 1), LONELY(1, 2), ADAMANT(1, 3), NAUGHTY(1, 4), BRAVE(1, 5),
