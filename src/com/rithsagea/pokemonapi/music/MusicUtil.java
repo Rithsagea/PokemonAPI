@@ -3,5 +3,7 @@ package com.rithsagea.pokemonapi.music;
 public class MusicUtil {
 	
 	
-	public void add
+	public void playSong(Sound sound) {
+		
+	}
 }
