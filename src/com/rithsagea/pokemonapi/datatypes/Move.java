@@ -1,4 +1,4 @@
-package com.rithsagea.pokemonapi;
+package com.rithsagea.pokemonapi.datatypes;
 
 public class Move {
 	public Move() {
