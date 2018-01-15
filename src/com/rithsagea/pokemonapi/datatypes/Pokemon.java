@@ -4,10 +4,6 @@ public class Pokemon {
 	
 	private Stats STATS;
 	
-	public Pokemon() {
-	  
-	}
-	
 	public Pokemon(Stats STATS) {
 		this.STATS = STATS;
 	}
