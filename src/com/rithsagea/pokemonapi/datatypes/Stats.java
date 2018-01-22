@@ -3,7 +3,7 @@ package com.rithsagea.pokemonapi.datatypes;
 import com.rithsagea.pokemonapi.util.Calculation;
 
 public class Stats {
-	private int[][] STATS = new int[3][6];
+	private int[][] STATS = new int[3][4];
 	/*
 	 * 0: EVs
 	 * 1: IVs
@@ -11,7 +11,7 @@ public class Stats {
 	 */
 	
 	public Stats(int[] EVS, int[] IVS) {
-		for(int x = 0; x < 6; x++) {
+		for(int x = 0; x < 4; x++) {
 			if(Calculation.between(IVS[x], 0, 31))
 				STATS[0][x] = IVS[x];
 			else
@@ -37,19 +37,19 @@ public class Stats {
 	}
 	
 	public int getIV(int stat) {
-		if(Calculation.between(stat, 0, 6))
+		if(Calculation.between(stat, 0, 4))
 			return STATS[0][stat];
 		return 0;
 	}
 	
 	public int getEV(int stat) {
-		if(Calculation.between(stat, 0, 6))
+		if(Calculation.between(stat, 0, 4))
 			return STATS[1][stat];
 		return 0;
 	}
 	
 	public int getTotal(int stat) {
-		if(Calculation.between(stat, 0, 6))
+		if(Calculation.between(stat, 0, 4))
 			return STATS[2][stat];
 		return 0;
 	}
